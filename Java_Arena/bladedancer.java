@@ -6,16 +6,16 @@ public class BladeDancer extends Player
     }
 
 	public int skillOne(){
-		int dmg = this.atk * 2;
-		this.def += 2;
-		System.out.println(this.name + " increases their defenses, allowing them to do " + String.valueOf(dmg) + " damage");
+		int dmg = atk * 2;
+		def += 2;
+		System.out.println(name + " increases their defenses, allowing them to do " + String.valueOf(dmg) + " damage");
 		return dmg;
 	}
 
 	public int skillTwo(){
-		int dmg = this.atk * 3;
-		this.atk += 2;
-		System.out.println(this.name + " stregthens themselves, allowing them to do " + String.valueOf(dmg) + " damage");
+		int dmg = atk * 3;
+		atk += 2;
+		System.out.println(name + " stregthens themselves, allowing them to do " + String.valueOf(dmg) + " damage");
 		return dmg;
 	}
 

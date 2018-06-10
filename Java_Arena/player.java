@@ -1,50 +1,56 @@
 
 public class Player{
 
-	public Player(String nameput, int health, int attack, int defense, int speed, String job){
-		this.name = nameput;
-		this.hp = health;
-		this.atk = attack;
-		this.def = defence;
-		this.spd = speed;
-		this.job = job;
+	public String name;
+	public int hp;
+	public int atk;
+	public int def;
+	public int spd;
+	public String job;
+
+	public Player(String nameput, int health, int attack, int defence, int speed, String job){
+		name = nameput;
+		hp = health;
+		atk = attack;
+		def = defence;
+		spd = speed;
+		job = job;
 	}
 
 	public String getName(){
-		return this.name;
+		return name;
 	}
 
 	public String getJob(){
-		return this.job;
+		return job;
 	}
 
 	public int getAttack(){
-		return this.atk;
+		return atk;
 	}
 
 	public int getHealth(){
-		return this.hp;
+		return hp;
 	}
 
-
 	public int getDefense(){
-		return this.def;
+		return def;
 	}
 
 	public int getSpeed(){
-		return this.spd;
+		return spd;
 	}
 
 	public int attack(){
-		System.out.println(this.name + " attacks the enemy!");
-		return this.atk;
+		System.out.println(name + " attacks the enemy!");
+		return atk;
 	}
 
 	public int takeDamage(int attack){
-		this.hp -= attack - this.def;
-		int damage = attack - this.def;
-		System.out.println(this.name + " took " + String.valueOf(damage) + " amount of damage. Current health: " + String.valueOf(this.hp));
-		return attack - this.def;
+		hp -= attack - def;
+		int damage = attack - def;
+		System.out.println(name + " took " + String.valueOf(damage) + " amount of damage. Current health: " + String.valueOf(hp));
+		return attack - def;
 	}
 
 }
